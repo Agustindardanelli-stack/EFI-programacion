@@ -22,7 +22,7 @@ export default function Login({ onSubmit }) {
   return (
     <section>
     <div className='w-[500px] mx-auto p-6'>
-      <div className='w-full p-6 m-auto bg-white shadow-xl shadow-rose-600/40 ring ring-2 ring-red-600 lg:max-w-xl'>
+      <div className='w-full p-6 m-auto bg-white shadow-xl shadow-rose-600/40 ring ring-2 mb-9 mt-9 ring-red-600 lg:max-w-xl'>
         <h1 className='text-3xl font-semibold text-center text-red-600  uppercase decoration-wavy'>
           Login SITEC
         </h1>

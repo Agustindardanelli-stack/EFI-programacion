@@ -1,32 +1,20 @@
 import React, { useState } from "react";
 const FORM_ENDPOINT = "";
 const ContactForm = () => {
-  const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = () => {
-    setTimeout(() => {
-      setSubmitted(true);
-    }, 100);
-  };
-  if (submitted) {
-    return (
-      <>
-        <div className="text-2xl">Thank you!</div>
-        <div className="text-md">We'll be in touch soon.</div>
-      </>
-    );
-  }
-  return (
+  
+    return (    
+  
+
     <div
-      className="h-screen flex flex-col 
-      items-center justify-center"
+      className=" flex flex-col 
+      items-center justify-center h-auto  bg-gray-600"
     >
-      <div className="mb-3 pt-0">
-        <h3 className="text-center text-gray-400 text-s">Contact Us</h3>
+      <div className=" pt-0">
+        <h3 className="text-center text-gray-300 text-s mt-4">Contacto </h3>
       </div>
       <form
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
-        action={FORM_ENDPOINT}
-        onSubmit={handleSubmit}        
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-10 mt-9"
+        
       >
         <div className="mb-3 pt-0">
           <input
