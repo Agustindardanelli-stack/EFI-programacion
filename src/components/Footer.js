@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Footer(){
     return (        
-  <footer className="text-center text-white bg-gray-800" >
+<footer className="text-center text-white bg-gray-800 -pt-1" >
   <div className="container pt-2">
     <div className="flex justify-center mb-9">
       <a href="https://www.facebook.com/iTecRioCuarto/" className="mr-9 text-white">
