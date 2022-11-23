@@ -5,7 +5,6 @@ import ContactForm from './components/Contact'
 import Home from './components/Home'
 import Login from './components/Login'
 import NotFound from './shared/NotFound'
-import RequireAuth from './shared/RequireAuth'
 import Footer from './components/Footer'
 import Novedades from './components/Novedades'
 import { AuthContext } from './context/AuthContext'
@@ -77,9 +76,7 @@ function App() {
           <Route
             path='/Materias'
             element={
-              <RequireAuth>
                 <Materias />
-              </RequireAuth>
             }
           />
           <Route path='/Contacto' element={<ContactForm />} />
