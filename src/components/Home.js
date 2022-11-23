@@ -1,23 +1,27 @@
 import { React} from 'react'
+import { useContext } from 'react'
+import { LanguageContext } from '../context/Context'
+import { getTexts } from '../locales/selectLanguage'
 
 
 
 const Home = () => {
+  const { language } = useContext(LanguageContext);
+  const textsLanguage = getTexts(language,'Home')
     return (
-      <section className='bg-gray-200' >
-           <div className=' custom-img contrast-125  saturate-150' >
-          <div className='block p-6  text-white text-center bg-stone-900 bg-opacity-50  ' >
-            <p className=' underline border-b-teal-500 text-white text-5xl dark:text-white' >Bienvenido a SITEC</p>    
+      <section className='bg-gray-200 ' >
+          <div className=' custom-img contrast-125  saturate-150' >
+          <div className='block sm:p-8 lg:p-24 text-white text-center bg-stone-900 bg-opacity-50 ' >
+            <p className=' no-underline border-b-teal-500 text-white text-5xl dark:text-white' >{textsLanguage.p1}</p>    
             <br/>      
-            <p className='p-4 text-2xl ' >Informacion de Contacto</p>
+            <p className='p-4 text-2xl ' >{textsLanguage.p2}</p>
             <br/>      
-            <p className='p-4 text-2xl'>Wenceslao Tejerina Norte 783 - Villa Dalcar - Río Cuarto</p>
+            <p className='p-4 text-2xl'>{textsLanguage.p3}</p>
             <br/>      
-            <p className='p-4 text-2xl'> Horarios de atención: De 9:00 a 13:00 y de 16:00 a 21:00 hs | Tel: (0358) 4643036</p>          
+            <p className='p-4 text-2xl'> {textsLanguage.p4}</p>          
             <br/>      
             <p className='p-4 underline text-2xl '>informes@itecriocuarto.org.ar</p>
           </div>
-          
           </div>                 
       </section>
     )

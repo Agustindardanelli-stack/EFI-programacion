@@ -9,6 +9,7 @@ import Footer from './components/Footer'
 import Novedades from './components/Novedades'
 import { AuthContext } from './context/AuthContext'
 import Layout from './components/Layout'
+import {LanguageProvider} from './context/LanguageProvider';
 // import PrivateRoute from './Routes/PrivateRoute'
 // import PublicRoute from './Routes/PublicRoute'
 
@@ -66,6 +67,7 @@ function App() {
 
   return (
     <>
+    <LanguageProvider>
       <Layout state={state}>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -78,6 +80,7 @@ function App() {
         </Routes>
         <Footer />
       </Layout>
+    </LanguageProvider>
     </>
   )
 }
