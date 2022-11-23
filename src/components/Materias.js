@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+import { Link } from 'react-router-dom';
 
 const Materias = () => {
-  return (
-    <section>
-        <h1 className='text-center text-4xl font-bold text-purple-400 py-6'>This is Materias page</h1>
-    </section>
-  )
-}
+  const { currentUser } = useContext(AuthContext);
 
-export default Materias
+  return (
+    <div>
+      // todo add materias template!
+      <h1>Materias</h1>
+      {currentUser ? (
+        <p>You are logged in</p>
+      ) : (
+        <p>You are not logged in</p>
+      )}
+      <Link to="/login">Login</Link>
+      <br />
+      <Link to="/home">Home</Link>
+    </div>
+  );
+};
+
+export default Materias;

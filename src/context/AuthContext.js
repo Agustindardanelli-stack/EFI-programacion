@@ -1,22 +1,18 @@
-import { createContext, useState, useEffect } from 'react'
+// create a context that will be used to store the user data
+//
+// Path: src/context/AuthContext.js
+import React, { useState } from 'react';
 
-// eslint-disable-next-line
-export default ({ children }) => {
-  const [state, setState] = useState({
-    auth: false,
-    id: '',
-    firstName: '',
-    lastName: '',
-    email: '',
-    profile: {},
-  })
-  useEffect(() => {
-    const usuario = JSON.parse(localStorage.getItem('usuario'))
-    if (usuario && !state.email) {
-      // Logee a su usuario aquí.
-    }
-  }, [state])
+const AuthContext = React.createContext();
 
-  return <AuthContext.Provider value={[state, setState]}>{children}</AuthContext.Provider>
-}
-export const AuthContext = createContext()
+const AuthProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState(null);
+
+  return (
+    <AuthContext.Provider value={{ currentUser, setCurrentUser }}>
+      {children}
+    </AuthContext.Provider>
+  );
+};
+
+export { AuthContext, AuthProvider };

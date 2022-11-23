@@ -1,40 +1,45 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
+import { serviceMock } from '../services/service_mock';
+import { Navigate } from 'react-router-dom';
 
-export default function Login({ onSubmit }) {
-  const [change, setChange] = useState({
-    email: '',
-    password: '',
-  })
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { currentUser } = useContext(AuthContext);
 
-  const handleChange = (e) => {
-    setChange({ ...change, [e.target.name]: e.target.value })
-  }
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    onSubmit(change)
-    // setSubmitting(true)
+  const handleLogin = () => {
+    // let history = Navigate();
 
-    setTimeout(() => {
-      // setSubmitting(false)
-    }, 3000)
-  }
+    if (serviceMock.login(email, password)) {
+      console.log('login successful');
+      currentUser = { name: email, password: password };
+      
+      // redirec to materias page after login
+      
+      // history.push('/materias');
+
+    } else {
+      console.log('login failed');
+    }
+  };
 
   return (
-    <div className='relative flex flex-col -mt-40 -mb-40 min-h-screen overflow-hidden'>
+      <div className='relative flex flex-col -mt-40 -mb-40 min-h-screen overflow-hidden'>
       <div className='w-full p-6 m-auto bg-white rounded-md shadow-xl shadow-rose-600/40 ring ring-2 ring-red-600 lg:max-w-xl'>
         <h1 className='text-3xl font-semibold text-center text-red-600  uppercase decoration-wavy'>
           Login SITEC
         </h1>
-        <form className='mt-6' onSubmit={handleSubmit}>
+        <form className='mt-6'>
           <div className='mb-2'>
             <label for='email' className='block text-sm font-semibold text-gray-800'>
               Email
             </label>
             <input
-              onChange={handleChange}
-              name='email'
-              type='email'
-              value={change.email}
+              type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
               className='block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40'
             />
           </div>
@@ -43,10 +48,10 @@ export default function Login({ onSubmit }) {
               Password
             </label>
             <input
-              name='password'
-              onChange={handleChange}
-              value={change.password}
-              type='password'
+              type="password"
+        placeholder="Password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
               className='block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40'
             />
           </div>
@@ -54,6 +59,7 @@ export default function Login({ onSubmit }) {
             <button
               type='submit'
               value='submit'
+                 onClick={handleLogin}
               className=' w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-red-600 focus:outline-none bg-red-600 focus:bg-red-600'
             >
               Login
@@ -62,5 +68,7 @@ export default function Login({ onSubmit }) {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Login;

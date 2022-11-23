@@ -2,16 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 import App from './App'
-import AuthContextProvider from './context/AuthContext'
+import {AuthContext, AuthProvider} from './context/AuthContext'
 import { BrowserRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <>
-    <AuthContextProvider>
+    <AuthContext.Provider value={{}}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
-    </AuthContextProvider>
+    </AuthContext.Provider>
   </>,
 )

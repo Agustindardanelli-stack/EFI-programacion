@@ -7,8 +7,8 @@ import validMateriasMock from '../mocks/mock_materias';
 
 async function login(email, password) {
     try {
-        if (validUsersMock.find(user => user.email === email && user.password === password)) {
-            return true;
+        if (validUsersMock().find(user => user.email === email && user.password === password)) {
+        return true;
         } else {
             return false
         }
