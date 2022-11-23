@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { NavLink  } from 'react-router-dom'
-import SelectLanguage from "./Language";
+import { useContext } from 'react'
+import SelectLanguage from "./Lang";
+import { LanguageContext } from '../context/Context'
+import { langtranslate } from '../locales/chooseLang'
+
 export default function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false); 
-
+  const { language } = useContext(LanguageContext);
+  const textsLanguage = langtranslate(language,'Navbar')
 return (
     <div className="flex items-center justify-between py-8 bg-gray-800 shadow">
         <a className="ml-10"href="/Home">
@@ -34,32 +39,32 @@ return (
                 </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
             <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/Home">Home</a>
+                <a href="/Home">{textsLanguage.home}</a>
             </li>
             <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/Login">Login</a>
+                <a href="/Login">{textsLanguage.login}</a>
             </li>
             <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/novedades">Novedades</a>
+                <a href="/novedades">{textsLanguage.news}</a>
             </li>
             <li className="border-b border-gray-400 my-8 uppercase">
-                <a href="/contacto">Contact</a>
+                <a href="/contacto">{textsLanguage.contact}</a>
             </li>
             </ul>
         </div>
         </section>
         <ul className="DESKTOP-MENU hidden space-x-8 lg:flex mr-20">
             <li>
-                <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full"><NavLink to="/home">Home</NavLink></button>
+                <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full"><NavLink to="/home">{textsLanguage.home}</NavLink></button>
             </li>
             <li className="ml-2">
-                <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full"><NavLink to="/Novedades">Novedades</NavLink></button>
+                <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full"><NavLink to="/Novedades">{textsLanguage.news}</NavLink></button>
             </li>
             <li className="ml-2">
-                <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full"><NavLink to="/Contacto">Contacto</NavLink> </button>
+                <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full"><NavLink to="/Contacto">{textsLanguage.contact}</NavLink> </button>
             </li>
             <li className="ml-2">
-                <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full"><NavLink to="/Login">Login</NavLink> </button>
+                <button className="bg-neutral-900 hover:bg-neutral-800 text-white font-bold py-2 px-4 rounded-full"><NavLink to="/Login">{textsLanguage.login}</NavLink> </button>
             </li>
             <li>
 

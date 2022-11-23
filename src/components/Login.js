@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
+import { LanguageContext } from '../context/Context'
+import { langtranslate } from '../locales/chooseLang'
 
 export default function Login({ onSubmit }) {
   const [change, setChange] = useState({
@@ -18,18 +21,19 @@ export default function Login({ onSubmit }) {
       // setSubmitting(false)
     }, 3000)
   }
-
+  const { language } = useContext(LanguageContext);
+  const textsLanguage = langtranslate(language,'Login')
   return (
     <section>
-    <div className='w-[500px] mx-auto p-6'>
+    <div className='w-[500px] mx-auto pt-28 pb-32'>
       <div className='w-full p-6 m-auto bg-white shadow-xl shadow-rose-600/40 ring ring-2 ring-red-600 lg:max-w-xl'>
         <h1 className='text-3xl font-semibold text-center text-red-600  uppercase decoration-wavy'>
-          Login SITEC
+          {textsLanguage.text}
         </h1>
         <form className='mt-6' onSubmit={handleSubmit}>
           <div className='mb-2'>
             <label for='email' className='block text-sm font-semibold text-gray-800'>
-              Email
+              {textsLanguage.email}
             </label>
             <input
               onChange={handleChange}
@@ -41,7 +45,7 @@ export default function Login({ onSubmit }) {
           </div>
           <div className='mb-2'>
             <label for='password' className='block text-sm font-semibold text-gray-800'>
-              Password
+              {textsLanguage.password}
             </label>
             <input
               name='password'

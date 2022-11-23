@@ -1,7 +1,7 @@
-import es from './es.json';
-import en from './en.json';
+import es from './esp.json';
+import en from './eng.json';
 
-export const getTexts = (language, from) => {
+export const langtranslate = (language, from) => {
     switch(language) {
         case 'ES':
             return es[from]

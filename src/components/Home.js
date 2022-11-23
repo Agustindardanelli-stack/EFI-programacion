@@ -1,13 +1,13 @@
 import { React} from 'react'
 import { useContext } from 'react'
 import { LanguageContext } from '../context/Context'
-import { getTexts } from '../locales/selectLanguage'
+import { langtranslate } from '../locales/chooseLang'
 
 
 
 const Home = () => {
   const { language } = useContext(LanguageContext);
-  const textsLanguage = getTexts(language,'Home')
+  const textsLanguage = langtranslate(language,'Home')
     return (
       <section className='bg-gray-200 ' >
           <div className=' custom-img contrast-125  saturate-150' >
