@@ -3,10 +3,10 @@ import React from 'react'
 const Novedades = () => {
   return (
     <div>
-      <section class="bg-white dark:bg-gray-900">
+      <section class="bg-white">
   <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
       <div class="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-          <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Novedades</h2>
+          <h2 class="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold text-gray-900">Novedades</h2>
           <p class="font-light text-gray-500 sm:text-xl dark:text-gray-400">Inscribite en el iTec y capacitate en las profesiones del futuro</p>
       </div> 
       <div class="grid gap-8 lg:grid-cols-3">

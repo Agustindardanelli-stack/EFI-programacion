@@ -9,7 +9,10 @@
     background-position :initial;
     height: 600px;
     
-
-
-    
 }
+
+@layer components {
+    .my-table-spacing {
+      border-spacing: theme("spacing.3");
+    }
+  }
