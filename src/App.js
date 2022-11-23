@@ -9,7 +9,7 @@ import Footer from './components/Footer'
 import Novedades from './components/Novedades'
 import { AuthContext } from './context/AuthContext'
 import Layout from './components/Layout'
-import {LanguageProvider} from './context/LanguageProvider';
+import {LanguageProvider} from './context/LanguageContext';
 // import PrivateRoute from './Routes/PrivateRoute'
 // import PublicRoute from './Routes/PublicRoute'
 
