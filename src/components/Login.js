@@ -21,9 +21,9 @@ export default function Login({ onSubmit }) {
 
   return (
     <section>
-    <div className='w-[500px] mx-auto p-6'>
-      <div className='w-full p-6 m-auto bg-white shadow-xl shadow-rose-600/40 ring ring-2 ring-red-600 lg:max-w-xl'>
-        <h1 className='text-3xl font-semibold text-center text-red-600  uppercase decoration-wavy'>
+    <div className='w-[500px] mx-auto p-24'>
+      <div className='w-full p-6 m-auto bg-white shadow-xl shadow-gray-900 ring ring-4 lg:max-w-xl'>
+        <h1 className='text-3xl font-semibold text-center text-gray-900  uppercase decoration-wavy'>
           Login SITEC
         </h1>
         <form className='mt-6' onSubmit={handleSubmit}>
@@ -55,7 +55,7 @@ export default function Login({ onSubmit }) {
             <button
               type='submit'
               value='submit'
-              className=' w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-red-600 focus:outline-none bg-red-600 focus:bg-red-600'
+              className=' w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-red-600 focus:outline-none dark:bg-gray-900 focus:bg-red-600'
               >
               Login
             </button>
