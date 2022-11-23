@@ -1,0 +1,39 @@
+{  
+    "NavBar": {
+        "welcomeMessage": "Hello",
+        "login": "LOGIN",
+        "home": "HOME",
+        "contact": "CONTACT",
+        "news":  "NEWS",
+        "logout": "logout"
+    },
+    "SignIn": {
+        "login": "Login",
+        "rememberData": "Remember",
+        "email": "Email",
+        "password": "Password",
+        "forgotPassword": "Forgot email?",
+        "signUp": "Sign up",
+        "modalInvalidUserTitle": "Invalid user",
+        "modalInvalidUserTitleMessage": "Please check your credentials and try again.",
+        "modalInvalidUserCloseMessage": "Close"
+    },
+    "Home": {
+        "p1":"Welcome to SITEC",
+        "p2":"Contact information",
+        "p3":"Wenceslao Tejerina Norte 783 - Villa Dalcar - Río Cuarto",
+        "p4":"Attention schedule: From 9:00 to 13:00 and 16:00 to 21:00 hs | Tel: (0358) 4643036"
+    },
+    "Footer": {
+        "home": "Home",
+        "about": "Contact",
+        "news": "News"
+    },
+    "Locations": {
+        "login": "login",
+        "home": "home",
+        "contact": "contact",
+        "news": "news",
+        "logout": "logout"
+    }
+}

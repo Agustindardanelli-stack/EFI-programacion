@@ -1,0 +1,39 @@
+{  
+    "NavBar": {
+        "welcomeMessage": "Hola",
+        "login": "INGRESAR",
+        "home": "INICIO",
+        "contact": "CONTACTO",
+        "news":  "NOVEDADES",
+        "logout": "cerrar sesión"
+    },
+    "SignIn": {
+        "login": "Iniciar Sesión",
+        "rememberData": "Recordar datos",
+        "email": "Correo electrónico *",
+        "password": "Contraseña",
+        "forgotPassword": "¿Olvidaste tu contraseña?",
+        "signUp": "Dar de alta la cuenta",
+        "modalInvalidUserTitle": "Usuario incorrecto",
+        "modalInvalidUserTitleMessage": "Por favor, revisa tus credenciales e intenta nuevamente.",
+        "modalInvalidUserCloseMessage": "Cerrar"
+    },
+    "Home": {
+        "p1":"Bienvenido a SITEC",
+        "p2":"Información de contacto",
+        "p3":"Wenceslao Tejerina Norte 783 - Villa Dalcar - Río Cuarto",
+        "p4":"Horarios de atención: De 9:00 a 13:00 y de 16:00 a 21:00 hs | Tel: (0358) 4643036"
+    },
+    "Footer": {
+        "home": "Inicio",
+        "about": "Contacto",
+        "news": "Novedades"
+    },
+    "Locations": {
+        "ingresar": "login",
+        "inicio": "home",
+        "contacto": "contact",
+        "novedades": "news",
+        "cerrar sesión": "logout"
+    }
+}     

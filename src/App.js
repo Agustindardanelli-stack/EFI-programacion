@@ -4,12 +4,12 @@ import Materias from './components/Materias'
 import ContactForm from './components/Contact'
 import Home from './components/Home'
 import Login from './components/Login'
-import NotFound from './shared/NotFound'
-import RequireAuth from './shared/RequireAuth'
+import NotFound from './components/NotFound'
 import Footer from './components/Footer'
 import Novedades from './components/Novedades'
 import { AuthContext } from './context/AuthContext'
 import Layout from './components/Layout'
+import {LanguageProvider} from './context/LanguageProvider';
 // import PrivateRoute from './Routes/PrivateRoute'
 // import PublicRoute from './Routes/PublicRoute'
 
@@ -67,26 +67,20 @@ function App() {
 
   return (
     <>
+    <LanguageProvider>
       <Layout state={state}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/home' element={<Home />} />
           <Route path='/login' element={<Login onSubmit={onSubmitLogin} />} />
           <Route path='/Novedades' element={<Novedades />} />
-
-          <Route
-            path='/Materias'
-            element={
-              <RequireAuth>
-                <Materias />
-              </RequireAuth>
-            }
-          />
+          <Route path='/Materias'element={<Materias />}/>
           <Route path='/Contacto' element={<ContactForm />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Footer />
       </Layout>
+    </LanguageProvider>
     </>
   )
 }

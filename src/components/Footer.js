@@ -3,10 +3,10 @@ import React from 'react';
 
 export default function Footer(){
     return (        
-        <footer className="text-center text-white bg-gray-300" >
-  <div className="container pt-9">
+  <footer className="text-center text-white bg-gray-800" >
+  <div className="container pt-2">
     <div className="flex justify-center mb-9">
-      <a href="#!" className="mr-9 text-gray-800">
+      <a href="https://www.facebook.com/iTecRioCuarto/" className="mr-9 text-white">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -23,7 +23,7 @@ export default function Footer(){
           ></path>
         </svg>
       </a>
-      <a href="#!" className="mr-9 text-gray-800">
+      <a href="https://twitter.com/itecriocuarto" className="mr-9 text-white">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -40,7 +40,7 @@ export default function Footer(){
           ></path>
         </svg>
       </a>
-      <a href="#!" className="mr-9 text-gray-800">
+      <a href="#!" className="mr-9 text-white">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -57,7 +57,7 @@ export default function Footer(){
           ></path>
         </svg>
       </a>
-      <a href="#!" className="mr-9 text-gray-800">
+      <a href="https://www.instagram.com/itecriocuarto/" className="mr-9 text-white">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -74,7 +74,7 @@ export default function Footer(){
           ></path>
         </svg>
       </a>
-      <a href="#!" className="mr-9 text-gray-800">
+      <a href="https://ar.linkedin.com/company/iteclabs" className="mr-9 text-white">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -91,7 +91,7 @@ export default function Footer(){
           ></path>
         </svg>
       </a>
-      <a href="#!" className="text-gray-800">
+      <a href="https://github.com/Itec-PP1" className="text-white">
         <svg
           aria-hidden="true"
           focusable="false"
@@ -110,9 +110,8 @@ export default function Footer(){
       </a>
     </div>
   </div>
-
-  <div className="text-center text-gray-700 p-4" >
-    © 2022 Copyright:    
+  <div className="text-center text-white pb-3 -mb-20 mr-20" >
+    © 2022 Copyright: SITEC
   </div>
 </footer>
 
