@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <AuthContext.Provider value={{}}>
+      <AuthProvider>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
-      </AuthContext.Provider>
+      </AuthProvider>
       <Footer />
     </>
   )

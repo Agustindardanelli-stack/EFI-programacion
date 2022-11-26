@@ -1,26 +1,20 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { serviceMock } from '../services/service_mock';
-import { Navigate } from 'react-router-dom';
 
 const Login = () => {
+  const { setCurrentUser } = useContext(AuthContext);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { currentUser } = useContext(AuthContext);
 
-  const handleLogin = () => {
-    // let history = Navigate();
-
-    if (serviceMock.login(email, password)) {
-      console.log('login successful');
-      currentUser = { name: email, password: password };
-      
-      // redirec to materias page after login
-      
-      // history.push('/materias');
-
-    } else {
-      console.log('login failed');
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      const { user } = await serviceMock.login(email, password);
+      setCurrentUser(user);
+      history.push('/');
+    } catch (error) {
+      console.log(error.message);
     }
   };
 

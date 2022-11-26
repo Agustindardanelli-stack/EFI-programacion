@@ -5,16 +5,27 @@
 import validUsersMock from '../mocks/mock_user';
 import validMateriasMock from '../mocks/mock_materias';
 
+
 async function login(email, password) {
-    try {
-        if (validUsersMock().find(user => user.email === email && user.password === password)) {
-        return true;
-        } else {
-            return false
+
+    const [auth, setAuth] = useState(false);
+
+    const authenticate = (email, password) => {
+        const user = validUsersMock.find(user => user.email === email && user.password === password);
+        if (user) {
+            setAuth(true);
+            console.log(true);
+            return user;
         }
-    } catch(e){
-        console.log(e);
+        return null;
     }
+
+    const signout = () => {
+        setAuth(false);
+    }
+
+    return { auth, authenticate, signout }
+
 }
 
 async function materias() {
